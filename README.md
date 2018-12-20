@@ -1,2 +1,2 @@
 # ShadowEffect
-kivy shadow effect
+unfinished project.
