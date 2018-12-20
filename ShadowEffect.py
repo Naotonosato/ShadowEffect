@@ -1,7 +1,7 @@
 from math import exp
 
 from kivy.core.window import Window
-Window.clearcolor = (0.8,0.8,0.8,1)
+Window.clearcolor = (1,1,1,1)
 
 from kivy.app import App
 from kivy.properties import NumericProperty,StringProperty
