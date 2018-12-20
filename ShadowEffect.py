@@ -10,7 +10,7 @@ from kivy.uix.effectwidget import EffectBase,EffectWidget
 shadow_v_glsl = '''
 int width = %s;
 float space = %s;
-float weight[%s] = %s;   //{0.16,0.15,0.12,0.09,0.05};
+float weight[%s] = %s;   
     
 float tFrag_y = 1.0 / resolution.y;
 
@@ -42,7 +42,7 @@ vec4 effect(vec4 color, sampler2D texture, vec2 tex_coords, vec2 coords)
 shadow_h_glsl = '''
 int width = %s;
 float space = %s;
-float weight[%s] = %s;   //{0.16,0.15,0.12,0.09,0.05};
+float weight[%s] = %s;   
     
 float tFrag_x = 1.0 / resolution.x;
 float tFrag_y = 1.0 / resolution.y;
