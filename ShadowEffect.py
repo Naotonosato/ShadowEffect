@@ -34,7 +34,7 @@ vec4 effect(vec4 color, sampler2D texture, vec2 tex_coords, vec2 coords)
 
         
 
-        return vec4(vec3(1.0),sum/2.0);
+        return vec4(vec3(1.0),sum/3.0);
     }
 }
 '''
@@ -93,7 +93,8 @@ class ShadowEffect(EffectWidget):
         shadow_v_effect = EffectBase(glsl=self.shadow_v % (self.shadow_width,0,self.shadow_width,weight))#ef.format(45,45))
         shadow_h_effect = EffectBase(glsl=self.shadow_h % (self.shadow_width,0,self.shadow_width,weight))
         
-        self.effects = [shadow_v_effect,shadow_h_effect]
+        self.effects = [shadow_v_effect,shadow_h_effect,
+                       shadow_v_effect]
 
     def gauss(self,x,s,m=0):
         '''
@@ -124,7 +125,8 @@ class ShadowEffect(EffectWidget):
         shadow_v_effect = EffectBase(glsl=self.shadow_v % (self.shadow_width,0,self.shadow_width,weight))#ef.format(45,45))
         shadow_h_effect = EffectBase(glsl=self.shadow_h % (self.shadow_width,0,self.shadow_width,weight))
 
-        self.effects = [shadow_v_effect,shadow_h_effect]
+        self.effects = [shadow_v_effect,shadow_h_effect,
+                       shadow_v_effect]
 
     def on_shadow_width(self,_,width):
     
@@ -133,7 +135,8 @@ class ShadowEffect(EffectWidget):
         shadow_v_effect = EffectBase(glsl=self.shadow_v % (width,0,width,weight))#ef.format(45,45))
         shadow_h_effect = EffectBase(glsl=self.shadow_h % (width,0,width,weight))
 
-        self.effects = [shadow_v_effect,shadow_h_effect]
+        self.effects = [shadow_v_effect,shadow_h_effect,
+                       shadow_v_effect]
 
 
 
